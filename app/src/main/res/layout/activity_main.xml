@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/expenseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="5dp"
+        android:text="Expense:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/expenseInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/expenseInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="45dp"
+        android:ems="10"
+        android:hint="Type your expense"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/expenseLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/expenseLabel" />
+
+    <TextView
+        android:id="@+id/valueLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="45dp"
+        android:text="Value:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/expenseLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseLabel" />
+
+    <EditText
+        android:id="@+id/valueInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:ems="10"
+        android:hint="Type how much you paid for it"
+        android:inputType="numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/valueLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/expenseInput" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="80dp"
+        android:text="Add"
+        app:layout_constraintEnd_toStartOf="@+id/listButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valueInput" />
+
+    <Button
+        android:id="@+id/listButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addButton"
+        app:layout_constraintEnd_toStartOf="@+id/totalButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addButton" />
+
+    <Button
+        android:id="@+id/totalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:text="Total"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/listButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
